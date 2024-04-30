@@ -1,0 +1,26 @@
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    serviceUrl:
+      defaultZone: http://localhost:7003/eureka/eureka/
+  instance:
+    hostname: localhost
+server:
+  port: 7004
+spring:
+  application:
+    name: EMPLOYEE-API-GET_WAY
+  cloud:
+    gateway:
+      routes:
+      - id: EMPLOYEE-SERVICE 
+        uri: lb://EMPLOYEE-SERVICE
+        predicates:
+        - Path=/emp/**
+          
+      - id: EMPLOYEE-AUTHANTICATION-SERVICE 
+        uri: lb://EMPLOYEE-AUTHANTICATION-SERVICE
+        predicates:
+        - Path=/auth/**
+    
