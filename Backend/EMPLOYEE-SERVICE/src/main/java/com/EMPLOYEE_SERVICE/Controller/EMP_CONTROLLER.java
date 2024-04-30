@@ -49,7 +49,7 @@ public class EMP_CONTROLLER {
 			String registerWithDetails = service.SaveEmpoyee_Data(dto);
 			return new ResponseEntity<String>(registerWithDetails,HttpStatus.OK);
 		}
-		return new ResponseEntity<String>("Something went wrong!",HttpStatus.BAD_REQUEST);
+		return new ResponseEntity<String>("Something went wrong Please Try Again!",HttpStatus.BAD_REQUEST);
 	
 	}
 /**********************************************************************************************************************/
