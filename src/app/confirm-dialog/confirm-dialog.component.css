@@ -1,0 +1,61 @@
+/* .containter{
+    width: 300px;
+    height: 2%;
+    padding: 10px;
+    margin: auto;
+    text-align: center;
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+} */
+.containter1{
+    width: 300px;
+    height: 170px;
+    margin: auto;
+    /* padding: 50px; */
+    text-align: center;
+    overflow: hidden;
+    color: rgb(2, 2, 2);
+    background-color: rgb(255, 255, 255);
+    
+   
+}
+/* .containter2
+{
+    background-color: black;
+    width: 75%;
+    height: 70%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    font-size: x-large;
+    color: white;
+}
+.containter2 p{
+    margin: auto;
+} */
+.container2 {
+    background-color: black;
+    width: 75%;
+    height: 120px;
+    margin: auto;
+    font-size: x-large;
+    color: white;
+    display: flex;
+    align-items: center;  /* This centers the content vertically */
+    justify-content: center; /* This centers the content horizontally */
+    text-align: center;
+    border: 1px solid;
+}
+
+.container2 p {
+    margin: 0; /* Reset margin to ensure centering works as expected */
+}
+
+.containter3{
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+}
+

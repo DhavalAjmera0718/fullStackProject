@@ -1,0 +1,145 @@
+
+
+/* body{
+    margin: auto;
+    padding: 20px;
+    width: 65%;
+    background-color: lightblue;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+} */
+body {
+    background-color: #f2f2f2; /* Light gray background */
+    /* background-image: url("src\assets\img\5570863.jpg"); */
+    background-image: url("https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    /* Creates a gradient from white to purple */
+    /* background-image: linear-gradient(to right, rgba(112, 34, 255, 0.993) ,rgb(255, 255, 255) 20%, rgba(255, 60, 0, 0.993) );  */
+    /* Increases the size of the background */
+    /* background-size: 200% 200%;  */
+    /* Starts the background from the left */
+    /* background-position: 0% 50%;  */
+    /* Applies the animation */
+    /* height: 150vh; */
+    /* animation: backgroundSlide 10s linear infinite; */
+    
+}
+@keyframes backgroundSlide {
+    0%, 100% {
+      background-color: black;
+      background-position: 0% 50%;
+      
+    }
+    50% {
+      background-color: rgb(255, 253, 253);
+      background-position: 100% 50%;
+    }
+  }
+  
+.container {
+    color: white;
+    width: auto; /* Auto width based on the content */
+    width: 100%; /* Maximum width */
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Optional: adds shadow to the container */
+    border: 1px solid black;
+    background-color: #0000005d; /* White background for the container */
+    box-shadow: 0px 0px 10px 0px rgb(2, 2, 2);
+}
+h2{
+    padding: 20px;
+    font-size: x-large;
+    font-family: 'Courier New', Courier, monospace, 'Times New Roman', Times, serif;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    overflow: hidden;
+    /* Hide overflowing text */
+    white-space: nowrap;
+    /* Prevent line breaks */
+    /* border-right: .1em solid rgb(0, 0, 0); Create a blinking cursor effect */
+    animation: revealText 6s steps(16, end);
+}
+
+/* Define the animation */
+@keyframes revealText {
+    from {
+        width: 0;
+        /* Start with 0 width */
+    }
+
+    to {
+        width: 100%;
+        /* Reveal the text */
+    }
+}
+
+
+/* Initial styling */
+input {
+
+    color: #000000;
+    /* White text color */
+    background-size: 300% 100%;
+    background-position: 100% center;
+    transition: background-position 0.5s ease-out, color 0.5s ease;
+    border: 1px solid #0000006e;
+    /* Green border, optional */
+}
+
+input:hover {
+    /* Change background position on hover */
+    background-image: linear-gradient(to right, #fffefe 20%, #4d4d4d 55%, #ffffff 50%);
+    background-position: 0% center;
+    /* color: #fdfdfd; Optional: Change text color on hover */
+}
+
+/* BUTTON */
+.button-92 {
+  --c: #ffffff;
+  /* text color */
+  background: linear-gradient(90deg, #ff029e 33%, rgba(213, 250, 5, 0.986), #0000 67%) var(--_p,100%)/300% no-repeat,
+    #3700ff;
+  /* background color */
+  color: #0000;
+  border: none;
+  transform: perspective(500px) rotateY(calc(20deg*var(--_i,-1)));
+  text-shadow: calc(var(--_i,-1)* 0.08em) -.01em 0   var(--c),
+    calc(var(--_i,-1)*-0.08em)  .01em 2px #0004;
+  outline-offset: .1em;
+  transition: 0.3s;
+  width: 100px;
+  height: 50px;
+  /* border-radius: 27% 81% 25% 62% / 32% 0% 37% 0%  ; */
+}
+
+.button-92:hover,
+.button-92:focus-visible {
+  --_p: 0%;
+  --_i: 1;
+}
+
+.button-92:active {
+  text-shadow: none;
+  color: var(--c);
+  box-shadow: inset 0 0 9e9q #0005;
+  transition: 0s;
+}
+
+.button-92 {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin: 0;
+  cursor: pointer;
+  padding: .1em .3em;
+}
+img{
+  /* filter:drop-shadow(10px 7px 10px white) ; */
+  box-shadow: 0px 0px 10px 0px white;
+}

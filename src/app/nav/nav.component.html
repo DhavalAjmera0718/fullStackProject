@@ -1,0 +1,41 @@
+
+
+<mat-toolbar  class="nav" >
+       
+    <span><img src="https://www.oplinnovate.com/assets/images/banner_shape.svg" routerLink="/home" width="100" height="50"></span>
+    <div id="RegisterUser">
+      <a class="" style="color: rgb(0, 0, 0);" routerLink="home">Home</a>
+      <a class="" style="color: rgb(0, 0, 0);" routerLink="login">About-Us</a>
+      <a class="" style="color: rgb(0, 0, 0);" routerLink="login">Career</a>
+      <a class="" style="color: rgb(0, 0, 0);" routerLink="registerEmpdata" *ngIf="loggedin">Register Employee</a>
+    <!-- <a style="color: aliceblue;" routerLink="userRegister"  *ngIf="loggedin" >Register User</a> -->
+    <!-- <a style="color: aliceblue;" routerLink="admin"  *ngIf="loggedin" >Admin</a> -->
+</div>
+    <span class="example-spacer"></span>
+    <a class="" style="color: rgb(0, 0, 0);" routerLink="login"  *ngIf="!loggedin" >Login</a>
+    <button class="button-64" *ngIf=" isStudentListPath()" routerLink="userdetailregister" >
+    <span>
+      Register-Student Details
+    </span>
+    </button>
+    <button class="button-64" *ngIf=" isAdminListIsOpen()" routerLink="add" >
+    <span>
+      Register-Admin Details
+    </span>
+    </button>
+    <!-- <button class="btn btn-success" style="margin-right: 10px;" *ngIf="!loggedin" routerLink="studentregister"   >Register Student</button> -->
+    <!-- <button class="button-64 mr-2" role="button" *ngIf="!loggedin" routerLink="studentregister"><span class="text">Register Student</span></button>
+    <button class="button-64" role="button" *ngIf="!loggedin" routerLink="adminregister"><span class="text">Register Admin</span></button> -->
+    <div class="dropdown">
+        <button class=" dropdown-toggle button-64" *ngIf="!loggedin" type="button" id="registerDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         <span>Sign Up</span>
+        </button>
+        <div class="dropdown-menu" aria-labelledby="registerDropdown">
+          <button class="dropdown-item" *ngIf="!loggedin" routerLink="registerEmp">Employee</button>
+          <button class="dropdown-item" *ngIf="!loggedin" routerLink="partial-reg-admin"> Admin</button>
+        </div>
+      </div>
+      
+    <!-- <a style="color: aliceblue;" mat-raised-button color="accent" (click)="LogoutUser()" *ngIf="loggedin">LogOut</a>  -->
+    <button  class="button-64" style="margin-left: 10px;" (click)="LogoutUser()" *ngIf="loggedin"> <span>LogOut</span></button> 
+</mat-toolbar>

@@ -1,0 +1,74 @@
+<body style="background-color: rgb(247, 247, 247);">
+
+
+    <div class="bootsrap-wrapper text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 offset-md-3" id="loginbox">
+                    <div class="container text-center">
+                        <img class="img-fluid" style="width: 300px; margin-top: 30px;"
+                            src="https://www.oplinnovate.com/assets/images/banner_shape.svg">
+                    </div>
+                    <br>
+
+                    <!-- Form Start Hear -->
+                    <form [formGroup]="formdata">
+
+
+                        <!-- EMAIL -->
+                        <mat-form-field class="full-width" >
+                            <mat-label>Enter Email</mat-label>
+                            <input type="email"  formControlName="email" name="email" matInput  readonly/>
+                        </mat-form-field>
+                        <!-- <span class="alert alert-danger" *ngIf="email && email.invalid && email.touched">
+                            Please Enter Correct Email
+                        </span> -->
+                        <hr>
+                        <!-- OTP DATA -->
+                        <mat-form-field class="full-width">
+                            <mat-label>Enter OTP</mat-label>
+                            <input type="otp" formControlName="otp" name="otp" matInput  />
+                        </mat-form-field>
+                        <div class="container col-md-10">
+                            <!-- <span class="alert alert-danger" *ngIf="otp && otp.invalid && otp.touched">
+                                OTP Must Be in Four Digit
+                            </span> -->
+                            <hr>
+                        </div>
+                        <!-- Date Of Birth -->
+                        <mat-form-field class="full-width">
+                            <mat-label>Date Of Birth</mat-label>
+                            <input type="date" formControlName="dob" name="dob" matInput readonly />
+                        </mat-form-field>
+
+                        <!-- EMAIL -->
+                        <!-- <mat-form-field class="full-width">
+                            <mat-label>Enter Email</mat-label>
+                            <input type="email"  [(ngModel)]="userdata.email" name="email"  matInput required/>
+                        </mat-form-field> -->
+
+                        <!-- OTP DATA -->
+                        <!-- <mat-form-field class="full-width">                            
+                            <mat-label>Enter OTP</mat-label>
+                            <input type="otp"  [(ngModel)]="userdata.otp" name="otp"  matInput required/>    
+                        </mat-form-field>                   -->
+
+                        <!-- Date Of Birth -->
+                        <!-- <mat-form-field class="full-width">
+                            <mat-label>Date Of Birth</mat-label>
+                            <input type="date"  [(ngModel)]="userdata.dob" name="dob"  matInput required/>
+                        </mat-form-field>
+ -->
+                        <div class="container text-center">
+                            <button type="submit" style="margin-right: 10px;" (click)="verifyOtp()"
+                                class="btn btn-success">Verify</button>
+                            <button type="submit" style="margin-right: 10px;" (click)="getForgotLink()"
+                                class="btn btn-success">Get Link</button>
+                        </div>
+                    </form>
+                    <!-- {{formdata | json}} -->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

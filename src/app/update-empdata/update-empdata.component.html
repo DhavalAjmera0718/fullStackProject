@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Profile</title>
+
+</head>
+
+<body>
+
+    <div class="employee-container"  >
+        <div class="employee-image">
+            <img [src]="Empdata.image" alt="Employee Image">
+        </div>
+        <div class="employee-info">
+            <h2>Employee Details</h2>
+            <p><strong>Email:</strong> {{Empdata.email}}</p>
+            <p><strong>Employee ID:</strong> {{ Empdata?.empId }}</p>
+            <p><strong>Name:</strong> {{ Empdata?.empName }}</p>
+            <p><strong>Contact:</strong> {{ Empdata?.contact }}</p>
+            <p><strong>City:</strong> {{ Empdata?.city }}</p>
+            <p><strong>Achievements:</strong> {{ Empdata?.achivements }}</p>
+        </div>
+        <button class="button-92" (click)="openDialog('80%', '80%',Empdata.email)">Update</button>
+        <button class="button-93"  (click)="DeleteEmpById()" *ngIf="flag" >Delete</button>
+    </div>
+</body>
+
+</html>

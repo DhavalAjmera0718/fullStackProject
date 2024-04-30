@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif; /* Sets the default font for the page */
+    margin: 0;
+    padding: 100px;
+    display: flex;
+    justify-content: center; /* Center the employee container horizontally */
+    align-items: center; /* Center the employee container vertically */
+    height: 100vh; /* Full viewport height */
+    /* background-color: black;
+    border: 1px solid white; */
+    /* background-image: url("https://images.unsplash.com/photo-1498262257252-c282316270bc?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); */
+    /* background-image: url("https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); */
+    background-image: url("https://images.pond5.com/white-seamless-animated-background-loop-072375356_prevstill.jpeg");
+    background-size: cover;
+
+}
+
+.employee-container {
+    display: flex;
+    width: 70%; /* Adjust the width as per your requirement */
+    
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Ensures no content spills outside the border */
+    box-shadow: 31px 42.4px 29.8px rgba(0, 0, 0, 0.486),
+    39.8px 54.5px 43.6px rgba(0, 0, 0, 0.336),
+    43.3px 59.4px 56.7px rgba(0, 0, 0, 0.02),
+    45.7px 62.6px 76.2px rgba(0, 0, 0, 0.023),
+    50.4px 69px 98.7px rgba(0, 0, 0, 0.026),
+    73px 100px 123px rgba(0, 0, 0, 0.03);
+    border: 1px solid;
+    margin-top: 100px;
+    animation: slideUp 2s ease-out forwards;
+    
+    border-radius:34% 99% 100% 100% / 0% 28% 0% 45% ;
+   
+}
+
+.employee-image {
+    flex: 1; /* Takes 1/3 of the container, adjust accordingly */
+    background-color: #f0f0f0; /* Light gray background for the image div */
+}
+
+.employee-image img {
+    width: 100%; /* Full width of the div */
+    height: 100%; /* Maintain aspect ratio */
+    display: block; /* Remove bottom space/gap */
+    /* padding: 20px; */
+}
+
+.employee-info {
+    flex: 2; /* Takes 2/3 of the container, adjust accordingly */
+    padding: 20px; /* Padding around the text */
+    background-color: #ffffff; /* White background for the text div */
+    
+}
+
+.employee-info h2 {
+    color: #333333; /* Dark grey color for the text */
+    margin-top: 0;
+}
+
+.employee-info p {
+    color: #666666; /* Lighter grey for the paragraph text */
+    line-height: 1.5; /* Spacing between lines */
+}
+
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+@keyframes slideUp {
+    from {
+        transform: translateY(0);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(-10%);
+        opacity: 1;
+    }
+}
+span {
+    display: inline-block; /* Allows transformation */
+    opacity: 0;            /* Start invisible */
+    animation: slideDown 0.5s ease-out forwards; /* Apply the animation */
+}

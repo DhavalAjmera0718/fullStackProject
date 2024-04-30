@@ -1,0 +1,54 @@
+<body>
+
+  <div class="home_banner darkblue_bg">
+    <div class="container">
+      <div class="row">
+        <!-- Text Column -->
+        <div class="col-md-6">
+          <div class="banner_content aos-init aos-animate" data-aos="fade-up">
+            <h1 class="section_title">
+              <span class="green_text glitch" data-text="innovation">Innovation</span>
+              <span class="orange_text glitch" data-text="is">is</span>
+              <span class="blue_text glitch mmt-1" data-text="good">good</span>
+            </h1>
+          </div>
+        </div>
+        <!-- Image Column -->
+        <div class="col-md-6">
+          <div class="banner_image aos-init aos-animate" data-aos="fade-up">
+            <img src="https://www.oplinnovate.com/assets/images/banner_shape.svg" alt="OPL - innovation is good">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!--  -->
+  <div class="" id="maincardDiv">
+    <div class="row2">
+      <!-- Dynamic Card Generation Using *ngFor -->
+      <div class="col-sm-2.50 swim-up-animation" *ngFor="let employee of employees">
+        <div class="card" style="width: 20rem;">
+          
+          <div id="img">
+            <img [src]="employee.image" class="card-img-top" alt="Employee Image">
+          </div>
+          <div class="card-body">
+            <p class="card-text">Name: {{employee.empName}}</p>
+            <p class="card-text">Email: {{employee.email}}</p>
+          </div>
+          <div class="card-footer text-center">
+            <a class="btn btn-primary" routerLink="/updateEmp" (click)="updateEmpdataRoute(employee.email)">View Profile</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  <!--  -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>

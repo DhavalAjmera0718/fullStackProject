@@ -1,0 +1,152 @@
+/* Home banner background and size adjustment */
+@keyframes changeBgColor {
+  0%   { background-color: #3d1bfd; }
+  20%  { background-color: #5a1ccc; }
+  40%  { background-color: #070707; }
+  60%  { background-color: #3d1bfd; }
+  80%  { background-color: #0da6ff; }
+  100% { background-color: #3d1bfd; }
+}
+
+
+.home_banner {
+  background-color: #3d1bfd;  /* Initial background color */
+  color: #fff; /* White text for contrast */
+  padding: 20px 0;
+  min-height: 90vh; /* Sets minimum height to 90% of the viewport height */
+  display: flex; /* Enables flexbox for this container */
+  align-items: center; /* Centers content vertically */
+  justify-content: center; /* Centers content horizontally */
+  animation: changeBgColor 20s infinite; /* Apply the animation */
+}
+
+
+.container {
+  
+  width: 90%; /* Adjust width as per design requirements */
+  max-width: 1300px; /* Optional: sets a max width for larger displays */
+  margin: auto; /* Centers the container horizontally */
+}
+
+.row {
+  width: 100%; /* Ensures row takes full width of its container */
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap as needed */
+  justify-content: space-between; /* Maintains spacing between columns */
+  
+}
+
+/* Text and image adjustments as previous */
+.aos-init {
+  opacity: 0;
+  transition: opacity 2s ease, transform 3s ease;
+}
+
+.aos-animate {
+  opacity: 1;
+  transform: translateY(-20px); /* Animation from below */
+
+  /* .aos-animate { */
+    opacity: 1;
+    transform: translateY(100px); /* Animation from above */
+  /* } */
+  
+}
+
+.col-md-6 {
+  flex: 0 0 50%;
+  max-width: 70%;
+}
+
+@media (max-width: 768px) {
+  .col-md-6 {
+      flex: 0 0 100%;
+      max-width: 100%;
+  }
+  .row {
+      flex-direction: column; /* Stacks items vertically on small screens */
+  }
+}
+
+/* Text styling adjustments */
+.section_title {
+  font-size: 5.5em; /* Increased text size for better visibility */
+  line-height: 1.2; /* Controls the line height for better readability */
+}
+
+/* Each text on a new line */
+.section_title span {
+  display: block; /* Makes each span start on a new line */
+}
+
+.banner_image img {
+  background-color: rgba(0, 0, 0, 0.288);
+  box-shadow: 0px 0px 10px 0px white ;
+  border-radius: 10px;
+  width: 100%;
+  padding: 10px;
+  height: auto;
+}
+
+/* Colored text */
+.green_text { color: #e0e0e0; } /* Green */
+.orange_text { color: #FF9800; } /* Orange */
+.blue_text { color: #2196F3; } /* Blue */
+
+/* CARD S*/
+
+
+.card {
+  
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-shadow: 31px 42.4px 29.8px rgba(0, 0, 0, 0.486),
+              39.8px 54.5px 43.6px rgba(0, 0, 0, 0.068),
+              43.3px 59.4px 56.7px rgba(0, 0, 0, 0.02),
+              45.7px 62.6px 76.2px rgba(0, 0, 0, 0.023),
+              50.4px 69px 98.7px rgba(0, 0, 0, 0.026),
+              73px 100px 123px rgba(0, 0, 0, 0.03);
+             
+ border-radius:61% 0% 68% 0% / 15% 10% 0% 10% ;
+ background-color: #ffffff8e;
+ color: rgb(0, 0, 0);
+ 
+}
+@keyframes swimUp {
+  from {
+    transform: translateY(100%);  /* Start below the original position */
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.swim-up-animation {
+  animation: swimUp 3s ease-out forwards;
+}
+.row2 {
+  width: 100%; /* Ensures row takes full width of its container */
+  display: flex;
+  flex-wrap: wrap; /*Allows items to wrap as needed*/
+  justify-content: space-between;/* Maintains spacing between columns*/
+  padding: 100px;
+}
+
+#img {
+  border: 1px solid;
+  border-radius: 61% 0% 68% 0% / 15% 10% 17% 10% ;
+  overflow: hidden; /* Ensures no parts of the image spill outside the border */
+  width: 100%; /* Fit to container width */
+  height: 400px; /* Fixed height */
+}
+
+.card-body {
+  flex: 1;
+}
+
+.card-footer {
+  border-top: 1px solid rgb(0, 0, 0); /* Optional: adds a line to visually separate the footer from the content */
+}

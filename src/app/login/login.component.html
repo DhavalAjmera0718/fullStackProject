@@ -1,0 +1,42 @@
+<body style="background-color: rgb(247, 247, 247);">
+
+
+    <div class="bootsrap-wrapper text-center">
+        <div class="container">
+            <div class="row" >
+                 <div class="col-md-6 offset-md-3" id="loginbox">
+                    <div class="container text-center">
+                        <img class="img-fluid" style="width: 300px; margin-top: 30px;"
+                            src="https://www.oplinnovate.com/assets/images/banner_shape.svg">
+                    </div>
+                    <br>
+                    <!-- Form Start Hear -->
+                    <form (ngSubmit)="onSubmit()">
+                        <mat-form-field class="full-width">
+                            <mat-label>User Name</mat-label>
+                            <input type="text" [(ngModel)]="userdata.username" name="username" matInput required />
+
+                        </mat-form-field>
+                        <mat-form-field class="full-width">
+                            <mat-label>Password</mat-label>
+                            <input type="password" [(ngModel)]="userdata.password" name="password" matInput required />
+
+                        </mat-form-field>
+                        <div class="container text-center">
+
+                            <button type="submit" style="margin-right: 10px;" mat-raised-button
+                                color="primary">Submit</button>
+                            <button type="reset" mat-raised-button color="accent">Reset</button>
+                        </div>
+                    </form>
+                    <!-- {{userdata | json}} -->
+                    <div class="container" id="">
+                        <h2>
+                            <a routerLink="/forgotpass" style="color: rgb(207, 233, 255);">Forgot Password</a>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

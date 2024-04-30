@@ -1,0 +1,111 @@
+.example-spacer {
+    flex: auto;
+  }
+  
+  .container {
+    margin-top: 20px;
+  }
+  
+  a {
+    margin-right: 10px;
+  }
+
+
+  .nav {
+    height: 50px; /* Adjust this value as needed */
+    min-height: 80px; /* Ensures that it doesn't go below 100px */
+    align-items: center; /* To vertically align the content */
+    background-color: rgba(253, 253, 253, 0.836);
+    border: 1px solid rgba(0, 0, 0, 0.288);
+
+}
+.mat-toolbar.nav {
+  position: fixed; /* Fixes the toolbar at its current location in the viewport */
+  top: 0; /* Aligns the toolbar at the top of the viewport */
+  left: 0; /* Aligns the toolbar to the left of the viewport */
+  width: 100%; /* Ensures the toolbar extends across the full width of the viewport */
+  z-index: 1000; /* Ensures the toolbar stays on top of other content */
+}
+
+  
+  button:hover{    
+    box-shadow: 0px 0px 20px 0px white;
+    border: 1px solid;
+    transition:  box-shadow 0.8s ease;
+  }
+  
+  #RegisterUser {
+   margin-left: 50px;
+  }
+
+
+  
+
+ 
+  @keyframes changeBgColor {
+    0%   { background-color: #3d1bfd; }
+    20%  { background-color: #5a1ccc; }
+    40%  { background-color: #070707; }
+    60%  { background-color: #3d1bfd; }
+    80%  { background-color: #710786; }
+    100% { background-color: #3d1bfd; }
+}
+
+  
+  /* CSS */
+  .button-64 {
+    align-items: center;
+    background-image: linear-gradient(144deg,#fa7a10, #8114ff 50%,#000000d2);
+    width: auto;  /* Adjusts automatically to the inner content plus padding */
+    padding: 10px 20px; 
+    /* animation: changeBgColor 20s infinite; */
+    /* background-image: linear-gradient(144deg,#ffffffd2, rgb(16, 159, 255) 50%,#97f828d2); */
+
+    border: 0;
+    border-radius: 8px;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    display: flex;
+    font-family: Phantomsans, sans-serif;
+    font-size: 20px;
+    justify-content: center;
+    line-height: 1em;
+    max-width: 100%;
+    min-width: 140px;
+    padding: 5px;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  
+  .button-64:active,
+  .button-64:hover {
+    outline: 0;
+  }
+  
+  .button-64 span {
+    background-color: rgba(16, 16, 19, 0.411);
+    padding: 16px 24px;
+    border-radius: 6px;
+    width: 100%;
+    height: 100%;
+    transition: 300ms;
+  }
+  
+  .button-64:hover span {
+    background: none;
+  }
+  
+ /* For tablets and below */
+@media (max-width: 768px) {
+  .button-64 {
+      font-size: 16px;  /* slightly smaller than default */
+      padding: 8px 16px;  /* Adjust padding */
+  }
+}
+
+
