@@ -26,7 +26,7 @@ public class Forgot_Password_Controller {
 	public ResponseEntity<String> sendRandomOTP(@PathVariable("email") String email
 			,@PathVariable("dob")  LocalDate dob) throws MessagingException {
 		
-		System.err.println("Email from Controller----->"+email);
+		System.err.println("Email from Controllerrrr----->"+email);
 		System.err.println("DOB from Controller----->"+dob);
 	    return new ResponseEntity<String>(forgot_password_impli.sendRandomOTP(email, dob), HttpStatus.CREATED);
 	}
